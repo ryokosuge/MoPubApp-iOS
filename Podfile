@@ -9,4 +9,7 @@ target 'MoPubApp' do
   # MoPub
   pod 'mopub-ios-sdk'
 
+  # MoPub MediationAdapter
+  pod 'MoPubMediationAdapterFluct'
+
 end
