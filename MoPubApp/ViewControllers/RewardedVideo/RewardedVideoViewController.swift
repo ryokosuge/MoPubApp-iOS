@@ -21,7 +21,7 @@ class RewardedVideoViewController: UIViewController {
         showButton?.isEnabled = false
         MPRewardedVideo.setDelegate(self, forAdUnitId: Consts.AdUnitID.rewardedVideo)
     }
-    
+
 }
 
 // MARK: - Interface Builder Action
@@ -101,7 +101,7 @@ extension RewardedVideoViewController: MPRewardedVideoDelegate {
     func rewardedVideoAdShouldReward(forAdUnitID adUnitID: String!, reward: MPRewardedVideoReward!) {
         print(#function, adUnitID ?? "")
         if let reward = reward {
-            print("currencyType:    \(reward.currencyType ?? "")",    "amount:    \(reward.amount.doubleValue)")
+            print("currencyType:    \(reward.currencyType ?? "")", "amount:    \(reward.amount.doubleValue)")
         }
     }
 

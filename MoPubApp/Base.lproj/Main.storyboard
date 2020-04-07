@@ -38,6 +38,26 @@
                                             <segue destination="22y-MQ-2di" kind="show" id="ga9-iX-NL1"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="o8i-L8-xLM" style="IBUITableViewCellStyleDefault" id="I7s-tT-Sha">
+                                        <rect key="frame" x="0.0" y="99" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I7s-tT-Sha" id="LTb-AV-tBE">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Fullscreen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o8i-L8-xLM">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rRb-D5-KsK" kind="show" id="1cS-Wf-gEb"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -119,6 +139,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHN-8o-Bck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="133.92857142857142"/>
+        </scene>
+        <!--Fullscreen-->
+        <scene sceneID="JZn-9i-IyX">
+            <objects>
+                <viewController id="rRb-D5-KsK" customClass="FullscreenViewController" customModule="MoPubApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hpA-1W-5Eb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Hw-zo-R0c">
+                                <rect key="frame" x="16" y="395" width="382" height="106"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYh-Lk-HAD">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="53"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
+                                        <state key="normal" title="Load Ad"/>
+                                        <connections>
+                                            <action selector="loadAd:" destination="rRb-D5-KsK" eventType="touchUpInside" id="KJ1-9z-IiR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wey-hZ-OSf">
+                                        <rect key="frame" x="0.0" y="53" width="382" height="53"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
+                                        <state key="normal" title="Show Ad"/>
+                                        <connections>
+                                            <action selector="showAd:" destination="rRb-D5-KsK" eventType="touchUpInside" id="tHW-KN-6hT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Hw-zo-R0c" firstAttribute="centerY" secondItem="hpA-1W-5Eb" secondAttribute="centerY" id="4Xy-10-EUR"/>
+                            <constraint firstItem="8Hw-zo-R0c" firstAttribute="leading" secondItem="uq3-Ga-3fe" secondAttribute="leading" constant="16" id="Asy-hM-Y9L"/>
+                            <constraint firstItem="uq3-Ga-3fe" firstAttribute="trailing" secondItem="8Hw-zo-R0c" secondAttribute="trailing" constant="16" id="iG5-Kz-1MR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uq3-Ga-3fe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fullscreen" id="3sH-JT-zwv"/>
+                    <connections>
+                        <outlet property="loadButton" destination="wYh-Lk-HAD" id="tvb-eJ-ZuN"/>
+                        <outlet property="showButton" destination="Wey-hZ-OSf" id="cte-RU-KaX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7C-zi-HyU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925" y="-569"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

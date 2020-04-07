@@ -12,5 +12,6 @@ struct Consts {
     struct AdUnitID {
         static let initialize: String = "0e62da92382645149878800bf5aac967"
         static let rewardedVideo: String = "0e62da92382645149878800bf5aac967"
+        static let fullscreen: String = "dfff8665442742f7b8a3b16269e78f9f"
     }
 }
