@@ -60,6 +60,7 @@ extension FullscreenViewController: MPInterstitialAdControllerDelegate {
 
     func interstitialDidFail(toLoadAd interstitial: MPInterstitialAdController!, withError error: Error!) {
         print(#function, interstitial.adUnitId ?? "", error.localizedDescription)
+        hideActivityIndicator()
         showAlert(message: error.localizedDescription)
         loadButton?.isEnabled = true
         showButton?.isEnabled = false

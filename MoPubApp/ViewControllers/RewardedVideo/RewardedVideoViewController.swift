@@ -63,6 +63,7 @@ extension RewardedVideoViewController: MPRewardedVideoDelegate {
 
     func rewardedVideoAdDidFailToLoad(forAdUnitID adUnitID: String!, error: Error!) {
         print(#function, adUnitID ?? "", error.localizedDescription)
+        hideActivityIndicator()
         showAlert(message: error.localizedDescription)
         loadButton?.isEnabled = true
         showButton?.isEnabled = false
