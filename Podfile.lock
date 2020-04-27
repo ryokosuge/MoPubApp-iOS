@@ -1,21 +1,21 @@
 PODS:
-  - FluctSDK (6.4.0)
-  - mopub-ios-sdk (5.12.0):
-    - mopub-ios-sdk/MoPubSDK (= 5.12.0)
-  - mopub-ios-sdk/Avid (5.12.0):
+  - FluctSDK (6.4.2)
+  - mopub-ios-sdk (5.12.1):
+    - mopub-ios-sdk/MoPubSDK (= 5.12.1)
+  - mopub-ios-sdk/Avid (5.12.1):
     - mopub-ios-sdk/Core
-  - mopub-ios-sdk/Core (5.12.0)
-  - mopub-ios-sdk/Moat (5.12.0):
+  - mopub-ios-sdk/Core (5.12.1)
+  - mopub-ios-sdk/Moat (5.12.1):
     - mopub-ios-sdk/Core
-  - mopub-ios-sdk/MoPubSDK (5.12.0):
+  - mopub-ios-sdk/MoPubSDK (5.12.1):
     - mopub-ios-sdk/Avid
     - mopub-ios-sdk/Core
     - mopub-ios-sdk/Moat
     - mopub-ios-sdk/NativeAds
-  - mopub-ios-sdk/NativeAds (5.12.0):
+  - mopub-ios-sdk/NativeAds (5.12.1):
     - mopub-ios-sdk/Core
-  - MoPubMediationAdapterFluct (6.4.0):
-    - FluctSDK (>= 6.4.0)
+  - MoPubMediationAdapterFluct (6.4.2):
+    - FluctSDK (>= 6.4.2)
     - mopub-ios-sdk (>= 5.10.0)
 
 DEPENDENCIES:
@@ -29,9 +29,9 @@ SPEC REPOS:
     - MoPubMediationAdapterFluct
 
 SPEC CHECKSUMS:
-  FluctSDK: 552e52d7d043eb3847ad2ae3d4c2815c7b22d5d6
-  mopub-ios-sdk: bb61d5741ba16c6a78e5a54e37bc60ef8c9a80a8
-  MoPubMediationAdapterFluct: b6827cadcf223794160d3d4a603872d159f6b2d2
+  FluctSDK: 0152106f194bc3f288b3cb217eb413cdfc2eaa25
+  mopub-ios-sdk: d1640225b34ad74700e2acddb116cac634fc45d8
+  MoPubMediationAdapterFluct: 3544f2172e21b8c823a04cdb821eb099c911cfd1
 
 PODFILE CHECKSUM: f569f00366372829caf2ca42d2e61a1fd483ec11
 
