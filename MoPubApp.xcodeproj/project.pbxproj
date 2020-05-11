@@ -14,6 +14,8 @@
 		7555F15E242370F300B9B0CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7555F15C242370F300B9B0CE /* LaunchScreen.storyboard */; };
 		75C9F455242376A700D64276 /* RewardedVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9F454242376A700D64276 /* RewardedVideoViewController.swift */; };
 		75C9F457242376B500D64276 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9F456242376B500D64276 /* Consts.swift */; };
+		75CFF6DB2469483800BB2BFA /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CFF6DA2469483800BB2BFA /* BannerViewController.swift */; };
+		75CFF6DD2469528D00BB2BFA /* RectangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CFF6DC2469528D00BB2BFA /* RectangleViewController.swift */; };
 		75F2F668243C564400453076 /* FullscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F667243C564400453076 /* FullscreenViewController.swift */; };
 		E98924C7F40144CD7A9AE96B /* Pods_MoPubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79CD9052EA74B60C2D7F578 /* Pods_MoPubApp.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,8 @@
 		7555F15F242370F300B9B0CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C9F454242376A700D64276 /* RewardedVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedVideoViewController.swift; sourceTree = "<group>"; };
 		75C9F456242376B500D64276 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		75CFF6DA2469483800BB2BFA /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		75CFF6DC2469528D00BB2BFA /* RectangleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleViewController.swift; sourceTree = "<group>"; };
 		75F2F667243C564400453076 /* FullscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenViewController.swift; sourceTree = "<group>"; };
 		AB91E92A2B4242A7FF80CE52 /* Pods-MoPubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoPubApp.debug.xcconfig"; path = "Target Support Files/Pods-MoPubApp/Pods-MoPubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D79CD9052EA74B60C2D7F578 /* Pods_MoPubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoPubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +86,7 @@
 		75C9F4522423768000D64276 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				75CFF6D92469482900BB2BFA /* Banner */,
 				75F2F666243C562E00453076 /* Fullscreen */,
 				75C9F4532423768C00D64276 /* RewardedVideo */,
 			);
@@ -94,6 +99,15 @@
 				75C9F454242376A700D64276 /* RewardedVideoViewController.swift */,
 			);
 			path = RewardedVideo;
+			sourceTree = "<group>";
+		};
+		75CFF6D92469482900BB2BFA /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				75CFF6DA2469483800BB2BFA /* BannerViewController.swift */,
+				75CFF6DC2469528D00BB2BFA /* RectangleViewController.swift */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		75F2F666243C562E00453076 /* Fullscreen */ = {
@@ -254,10 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75CFF6DB2469483800BB2BFA /* BannerViewController.swift in Sources */,
 				7555F152242370F000B9B0CE /* AppDelegate.swift in Sources */,
 				75F2F668243C564400453076 /* FullscreenViewController.swift in Sources */,
 				75C9F457242376B500D64276 /* Consts.swift in Sources */,
 				75C9F455242376A700D64276 /* RewardedVideoViewController.swift in Sources */,
+				75CFF6DD2469528D00BB2BFA /* RectangleViewController.swift in Sources */,
 				7555F154242370F000B9B0CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
