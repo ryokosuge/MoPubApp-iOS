@@ -23,7 +23,7 @@ DEPENDENCIES:
   - MoPubMediationAdapterFluct
 
 SPEC REPOS:
-  https://cdn.cocoapods.org/:
+  trunk:
     - FluctSDK
     - mopub-ios-sdk
     - MoPubMediationAdapterFluct
