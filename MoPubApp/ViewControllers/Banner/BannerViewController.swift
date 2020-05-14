@@ -12,6 +12,7 @@ import MoPub
 class BannerViewController: UIViewController {
 
     private var adView: MPAdView?
+    private var startDate: Date?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,9 @@ class BannerViewController: UIViewController {
 extension BannerViewController {
 
     @IBAction func refresh(_ barButtonItem: UIBarButtonItem) {
+        let startDate = Date()
+        print(#function, ": load start time [\(startDate)]")
+        self.startDate = startDate
         adView?.loadAd(withMaxAdSize: kMPPresetMaxAdSize50Height)
     }
 
@@ -47,6 +51,10 @@ extension BannerViewController {
         adView.delegate = self
         adView.frame = CGRect(x: 0, y: 0, width: 320, height: 50)
         view.addSubview(adView)
+
+        let startDate = Date()
+        print(#function, ": load start time [\(startDate)]")
+        self.startDate = startDate
         adView.loadAd(withMaxAdSize: kMPPresetMaxAdSize50Height)
         
         self.adView = adView
@@ -62,6 +70,12 @@ extension BannerViewController: MPAdViewDelegate {
 
     func adViewDidLoadAd(_ view: MPAdView!, adSize: CGSize) {
         print(#function, view!, view!.adUnitId ?? "nil", adSize)
+
+        if let startDate = self.startDate {
+            let endDate = Date().timeIntervalSince(startDate)
+            print(#function, ": load finish time [\(endDate)]")
+            self.startDate = nil
+        }
     }
 
     func adView(_ view: MPAdView!, didFailToLoadAdWithError error: Error!) {
