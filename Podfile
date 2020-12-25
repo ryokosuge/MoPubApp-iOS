@@ -1,4 +1,7 @@
 # Uncomment the next line to define a global platform for your project
+# source 'https://github.com/CocoaPods/Specs'
+# source 'https://cdn.cocoapods.org/'
+
 platform :ios, '13.0'
 
 target 'MoPubApp' do
@@ -10,6 +13,6 @@ target 'MoPubApp' do
   pod 'mopub-ios-sdk'
 
   # MoPub MediationAdapter
-  pod 'MoPubMediationAdapterFluct'
+  pod 'MoPubMediationAdapterFluct', '6.12.8'
 
 end
