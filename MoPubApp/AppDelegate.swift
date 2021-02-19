@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MoPub
+import MoPubSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
