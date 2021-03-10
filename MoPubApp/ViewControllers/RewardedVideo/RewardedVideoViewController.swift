@@ -19,7 +19,7 @@ class RewardedVideoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         showButton?.isEnabled = false
-        MPRewardedVideo.setDelegate(self, forAdUnitId: Consts.AdUnitID.rewardedVideo)
+        MPRewardedAds.setDelegate(self, forAdUnitId: Consts.AdUnitID.rewardedVideo)
     }
 
 }
@@ -32,36 +32,34 @@ extension RewardedVideoViewController {
         showActivityIndicator()
         loadButton?.isEnabled = false
         showButton?.isEnabled = false
-        MPRewardedVideo.loadAd(withAdUnitID: Consts.AdUnitID.rewardedVideo, withMediationSettings: [])
+        MPRewardedAds.loadRewardedAd(withAdUnitID: Consts.AdUnitID.rewardedVideo, withMediationSettings: [])
     }
 
     @IBAction func showAd(_ button: UIButton) {
-        guard MPRewardedVideo.hasAdAvailable(forAdUnitID: Consts.AdUnitID.rewardedVideo) else {
+        guard MPRewardedAds.hasAdAvailable(forAdUnitID: Consts.AdUnitID.rewardedVideo) else {
             return
         }
 
-        guard let rewards = MPRewardedVideo.availableRewards(forAdUnitID: Consts.AdUnitID.rewardedVideo) as? [MPRewardedVideoReward],
-            let reward = rewards.first else {
-            return
-        }
-
-        MPRewardedVideo.presentAd(forAdUnitID: Consts.AdUnitID.rewardedVideo, from: self, with: reward)
+        let reward = MPRewardedAds.selectedReward(forAdUnitID: Consts.AdUnitID.rewardedVideo)
+        MPRewardedAds.presentRewardedAd(forAdUnitID: Consts.AdUnitID.rewardedVideo,
+                                        from: self,
+                                        with: reward)
     }
 
 }
 
 // MARK: - MPRewardedVideo Delegate
 
-extension RewardedVideoViewController: MPRewardedVideoDelegate {
+extension RewardedVideoViewController: MPRewardedAdsDelegate {
 
-    func rewardedVideoAdDidLoad(forAdUnitID adUnitID: String!) {
+    func rewardedAdDidLoad(forAdUnitID adUnitID: String!) {
         print(#function, adUnitID ?? "")
         hideActivityIndicator()
         loadButton?.isEnabled = true
         showButton?.isEnabled = true
     }
 
-    func rewardedVideoAdDidFailToLoad(forAdUnitID adUnitID: String!, error: Error!) {
+    func rewardedAdDidFailToLoad(forAdUnitID adUnitID: String!, error: Error!) {
         print(#function, adUnitID ?? "", error.localizedDescription)
         hideActivityIndicator()
         showAlert(message: error.localizedDescription)
@@ -69,48 +67,48 @@ extension RewardedVideoViewController: MPRewardedVideoDelegate {
         showButton?.isEnabled = false
     }
 
-    func rewardedVideoAdWillAppear(forAdUnitID adUnitID: String!) {
+    func rewardedAdWillPresent(forAdUnitID adUnitID: String!) {
         print(#function, adUnitID ?? "")
     }
 
-    func rewardedVideoAdDidAppear(forAdUnitID adUnitID: String!) {
+    func rewardedAdDidPresent(forAdUnitID adUnitID: String!) {
         print(#function, adUnitID ?? "")
     }
 
-    func rewardedVideoAdDidFailToPlay(forAdUnitID adUnitID: String!, error: Error!) {
+    func rewardedAdDidFailToShow(forAdUnitID adUnitID: String!, error: Error!) {
         print(#function, adUnitID ?? "", error.localizedDescription)
         showAlert(message: error.localizedDescription)
         loadButton?.isEnabled = true
         showButton?.isEnabled = false
     }
 
-    func rewardedVideoAdDidExpire(forAdUnitID adUnitID: String!) {
+    func rewardedAdDidExpire(forAdUnitID adUnitID: String!) {
         print(#function, adUnitID ?? "")
         showAlert(message: "expired")
         loadButton?.isEnabled = true
         showButton?.isEnabled = false
     }
 
-    func rewardedVideoAdDidReceiveTapEvent(forAdUnitID adUnitID: String!) {
+    func rewardedAdDidReceiveTapEvent(forAdUnitID adUnitID: String!) {
         print(#function, adUnitID ?? "")
     }
 
-    func rewardedVideoAdWillLeaveApplication(forAdUnitID adUnitID: String!) {
+    func rewardedAdWillLeaveApplication(forAdUnitID adUnitID: String!) {
         print(#function, adUnitID ?? "")
     }
 
-    func rewardedVideoAdShouldReward(forAdUnitID adUnitID: String!, reward: MPRewardedVideoReward!) {
+    func rewardedAdShouldReward(forAdUnitID adUnitID: String!, reward: MPReward!) {
         print(#function, adUnitID ?? "")
         if let reward = reward {
             print("currencyType:    \(reward.currencyType ?? "")", "amount:    \(reward.amount.doubleValue)")
         }
     }
 
-    func rewardedVideoAdWillDisappear(forAdUnitID adUnitID: String!) {
+    func rewardedAdWillDismiss(forAdUnitID adUnitID: String!) {
         print(#function, adUnitID ?? "")
     }
 
-    func rewardedVideoAdDidDisappear(forAdUnitID adUnitID: String!) {
+    func rewardedAdDidDismiss(forAdUnitID adUnitID: String!) {
         print(#function, adUnitID ?? "")
         loadButton?.isEnabled = true
         showButton?.isEnabled = false
