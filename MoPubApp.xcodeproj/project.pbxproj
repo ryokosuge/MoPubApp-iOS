@@ -17,6 +17,7 @@
 		75CFF6DB2469483800BB2BFA /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CFF6DA2469483800BB2BFA /* BannerViewController.swift */; };
 		75CFF6DD2469528D00BB2BFA /* RectangleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CFF6DC2469528D00BB2BFA /* RectangleViewController.swift */; };
 		75F2F668243C564400453076 /* FullscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F2F667243C564400453076 /* FullscreenViewController.swift */; };
+		DAA2AEFE264B6E780009FB08 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA2AEFD264B6E780009FB08 /* StoreKit.framework */; };
 		E98924C7F40144CD7A9AE96B /* Pods_MoPubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79CD9052EA74B60C2D7F578 /* Pods_MoPubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		75F2F667243C564400453076 /* FullscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenViewController.swift; sourceTree = "<group>"; };
 		AB91E92A2B4242A7FF80CE52 /* Pods-MoPubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoPubApp.debug.xcconfig"; path = "Target Support Files/Pods-MoPubApp/Pods-MoPubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D79CD9052EA74B60C2D7F578 /* Pods_MoPubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoPubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA2AEFD264B6E780009FB08 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E98924C7F40144CD7A9AE96B /* Pods_MoPubApp.framework in Frameworks */,
+				DAA2AEFE264B6E780009FB08 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +124,7 @@
 		9463963D2F68D753C75E8EBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAA2AEFD264B6E780009FB08 /* StoreKit.framework */,
 				D79CD9052EA74B60C2D7F578 /* Pods_MoPubApp.framework */,
 			);
 			name = Frameworks;

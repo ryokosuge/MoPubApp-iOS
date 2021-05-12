@@ -1,55 +1,55 @@
 PODS:
-  - AdColony (4.5.0)
-  - AppLovinSDK (6.15.2)
-  - FluctSDK (6.13.0)
-  - FluctSDK-MediationAdapter (6.13.0):
-    - FluctSDK-MediationAdapter/AdColony (= 6.13.0)
-    - FluctSDK-MediationAdapter/AdCorsa (= 6.13.0)
-    - FluctSDK-MediationAdapter/AppLovin (= 6.13.0)
-    - FluctSDK-MediationAdapter/Five (= 6.13.0)
-    - FluctSDK-MediationAdapter/maio (= 6.13.0)
-    - FluctSDK-MediationAdapter/nend (= 6.13.0)
-    - FluctSDK-MediationAdapter/Tapjoy (= 6.13.0)
-    - FluctSDK-MediationAdapter/UnityAds (= 6.13.0)
-  - FluctSDK-MediationAdapter/AdColony (6.13.0):
+  - AdColony (4.6.1)
+  - AppLovinSDK (10.2.1)
+  - FluctSDK (6.13.4)
+  - FluctSDK-MediationAdapter (6.13.4):
+    - FluctSDK-MediationAdapter/AdColony (= 6.13.4)
+    - FluctSDK-MediationAdapter/AdCorsa (= 6.13.4)
+    - FluctSDK-MediationAdapter/AppLovin (= 6.13.4)
+    - FluctSDK-MediationAdapter/Five (= 6.13.4)
+    - FluctSDK-MediationAdapter/maio (= 6.13.4)
+    - FluctSDK-MediationAdapter/nend (= 6.13.4)
+    - FluctSDK-MediationAdapter/Tapjoy (= 6.13.4)
+    - FluctSDK-MediationAdapter/UnityAds (= 6.13.4)
+  - FluctSDK-MediationAdapter/AdColony (6.13.4):
     - AdColony (>= 4.3.1)
     - FluctSDK (>= 6.12.4)
-  - FluctSDK-MediationAdapter/AdCorsa (6.13.0):
+  - FluctSDK-MediationAdapter/AdCorsa (6.13.4):
     - FluctSDK (>= 6.12.4)
     - GlossomAds (>= 2.2.2)
-  - FluctSDK-MediationAdapter/AppLovin (6.13.0):
-    - AppLovinSDK (>= 6.14.2)
+  - FluctSDK-MediationAdapter/AppLovin (6.13.4):
+    - AppLovinSDK (>= 10.0.0)
     - FluctSDK (>= 6.12.4)
-  - FluctSDK-MediationAdapter/Five (6.13.0):
+  - FluctSDK-MediationAdapter/Five (6.13.4):
     - FluctSDK (>= 6.12.4)
-  - FluctSDK-MediationAdapter/maio (6.13.0):
+  - FluctSDK-MediationAdapter/maio (6.13.4):
     - FluctSDK (>= 6.12.4)
     - MaioSDK (>= 1.5.5)
-  - FluctSDK-MediationAdapter/nend (6.13.0):
+  - FluctSDK-MediationAdapter/nend (6.13.4):
     - FluctSDK (>= 6.12.4)
     - NendSDK_iOS (= 7.0.0)
-  - FluctSDK-MediationAdapter/Tapjoy (6.13.0):
+  - FluctSDK-MediationAdapter/Tapjoy (6.13.4):
     - FluctSDK (>= 6.12.4)
-    - TapjoySDK (>= 12.7.0)
-  - FluctSDK-MediationAdapter/UnityAds (6.13.0):
+    - TapjoySDK (>= 12.8.0)
+  - FluctSDK-MediationAdapter/UnityAds (6.13.4):
     - FluctSDK (>= 6.12.4)
     - UnityAds (>= 3.5.1)
   - GlossomAds (2.2.2)
   - MaioSDK (1.5.6)
-  - mopub-ios-sdk (5.16.1):
-    - mopub-ios-sdk/MoPubSDK (= 5.16.1)
-  - mopub-ios-sdk/Core (5.16.1)
-  - mopub-ios-sdk/MoPubSDK (5.16.1):
+  - mopub-ios-sdk (5.17.0):
+    - mopub-ios-sdk/MoPubSDK (= 5.17.0)
+  - mopub-ios-sdk/Core (5.17.0)
+  - mopub-ios-sdk/MoPubSDK (5.17.0):
     - mopub-ios-sdk/Core
     - mopub-ios-sdk/NativeAds
-  - mopub-ios-sdk/NativeAds (5.16.1):
+  - mopub-ios-sdk/NativeAds (5.17.0):
     - mopub-ios-sdk/Core
-  - MoPubMediationAdapterFluct (6.13.0):
+  - MoPubMediationAdapterFluct (6.13.4):
     - FluctSDK (>= 6.12.1)
     - mopub-ios-sdk (>= 5.15.0)
   - NendSDK_iOS (7.0.0)
-  - TapjoySDK (12.7.1)
-  - UnityAds (3.6.0)
+  - TapjoySDK (12.8.0)
+  - UnityAds (3.7.1)
 
 DEPENDENCIES:
   - FluctSDK-MediationAdapter
@@ -71,17 +71,17 @@ SPEC REPOS:
     - UnityAds
 
 SPEC CHECKSUMS:
-  AdColony: e54ee1d060491410135a5a1c9b010bcb4a171dab
-  AppLovinSDK: fc91aca5b6b529cae7181a43f63633363dddbe3b
-  FluctSDK: ab0d0872b9f353b0e8a11aebea8c6460052f0280
-  FluctSDK-MediationAdapter: 40dcc3a19a2af4e55496292b1e610ec2ad482eba
+  AdColony: 957c975fa756fcdb10a91e8a7d6de4cf5bfc4f78
+  AppLovinSDK: 2cc4e6b637defd9771a31fc6e7e4071ea77928c7
+  FluctSDK: 1360ff53387593521c2f5b9d4a1fcc5c43e6db4b
+  FluctSDK-MediationAdapter: 34424ace0fea3afd27620494eff74a338ab341ef
   GlossomAds: 1ad4c13430448da5d8acaa2f0595c1189f3af824
   MaioSDK: 5a93c2209c02c4a8bddfd5da4c9a1f900bd60573
-  mopub-ios-sdk: d207b434e6aef9c2f57423512e5eda1edf82930f
-  MoPubMediationAdapterFluct: 3d580aa98fca7475adb1a955e096d7d10ac01bbe
+  mopub-ios-sdk: 36d322902674b79b0560a1cb8d15af0548d364ea
+  MoPubMediationAdapterFluct: 612a8c2a0b2e9fc379be7392ff037c33943e3828
   NendSDK_iOS: 5f4d2574d19aece3ebf8ef1833ece0c4af48da23
-  TapjoySDK: 27e4116ba377dcbe064743ca3ec3a8d70ccee2bb
-  UnityAds: 3f88cf3d3b11991de1025fcf0e3109fd86035fba
+  TapjoySDK: eee3e1c96945a75028cc7572993a645a5f10adbe
+  UnityAds: 5b17b608ddb50ec7705b17e7884aa516be118938
 
 PODFILE CHECKSUM: ac8704840b6d4ce0b4fff6eed4ca22842ecc0d7f
 
