@@ -1,37 +1,39 @@
 PODS:
   - AdColony (4.6.1)
-  - AppLovinSDK (10.2.1)
-  - FluctSDK (6.13.4)
-  - FluctSDK-MediationAdapter (6.13.4):
-    - FluctSDK-MediationAdapter/AdColony (= 6.13.4)
-    - FluctSDK-MediationAdapter/AdCorsa (= 6.13.4)
-    - FluctSDK-MediationAdapter/AppLovin (= 6.13.4)
-    - FluctSDK-MediationAdapter/Five (= 6.13.4)
-    - FluctSDK-MediationAdapter/maio (= 6.13.4)
-    - FluctSDK-MediationAdapter/nend (= 6.13.4)
-    - FluctSDK-MediationAdapter/Tapjoy (= 6.13.4)
-    - FluctSDK-MediationAdapter/UnityAds (= 6.13.4)
-  - FluctSDK-MediationAdapter/AdColony (6.13.4):
+  - AppLovinSDK (10.3.0)
+  - FiveAd (2.3.20210524)
+  - FluctSDK (6.13.6)
+  - FluctSDK-MediationAdapter (6.13.6):
+    - FluctSDK-MediationAdapter/AdColony (= 6.13.6)
+    - FluctSDK-MediationAdapter/AdCorsa (= 6.13.6)
+    - FluctSDK-MediationAdapter/AppLovin (= 6.13.6)
+    - FluctSDK-MediationAdapter/Five (= 6.13.6)
+    - FluctSDK-MediationAdapter/maio (= 6.13.6)
+    - FluctSDK-MediationAdapter/nend (= 6.13.6)
+    - FluctSDK-MediationAdapter/Tapjoy (= 6.13.6)
+    - FluctSDK-MediationAdapter/UnityAds (= 6.13.6)
+  - FluctSDK-MediationAdapter/AdColony (6.13.6):
     - AdColony (>= 4.3.1)
     - FluctSDK (>= 6.12.4)
-  - FluctSDK-MediationAdapter/AdCorsa (6.13.4):
+  - FluctSDK-MediationAdapter/AdCorsa (6.13.6):
     - FluctSDK (>= 6.12.4)
     - GlossomAds (>= 2.2.2)
-  - FluctSDK-MediationAdapter/AppLovin (6.13.4):
+  - FluctSDK-MediationAdapter/AppLovin (6.13.6):
     - AppLovinSDK (>= 10.0.0)
     - FluctSDK (>= 6.12.4)
-  - FluctSDK-MediationAdapter/Five (6.13.4):
+  - FluctSDK-MediationAdapter/Five (6.13.6):
+    - FiveAd (>= 2.3.20210326)
     - FluctSDK (>= 6.12.4)
-  - FluctSDK-MediationAdapter/maio (6.13.4):
+  - FluctSDK-MediationAdapter/maio (6.13.6):
     - FluctSDK (>= 6.12.4)
     - MaioSDK (>= 1.5.5)
-  - FluctSDK-MediationAdapter/nend (6.13.4):
+  - FluctSDK-MediationAdapter/nend (6.13.6):
     - FluctSDK (>= 6.12.4)
-    - NendSDK_iOS (= 7.0.0)
-  - FluctSDK-MediationAdapter/Tapjoy (6.13.4):
+    - NendSDK_iOS (>= 7.0.4)
+  - FluctSDK-MediationAdapter/Tapjoy (6.13.6):
     - FluctSDK (>= 6.12.4)
     - TapjoySDK (>= 12.8.0)
-  - FluctSDK-MediationAdapter/UnityAds (6.13.4):
+  - FluctSDK-MediationAdapter/UnityAds (6.13.6):
     - FluctSDK (>= 6.12.4)
     - UnityAds (>= 3.5.1)
   - GlossomAds (2.2.2)
@@ -44,12 +46,12 @@ PODS:
     - mopub-ios-sdk/NativeAds
   - mopub-ios-sdk/NativeAds (5.17.0):
     - mopub-ios-sdk/Core
-  - MoPubMediationAdapterFluct (6.13.4):
+  - MoPubMediationAdapterFluct (6.13.6):
     - FluctSDK (>= 6.12.1)
     - mopub-ios-sdk (>= 5.15.0)
-  - NendSDK_iOS (7.0.0)
-  - TapjoySDK (12.8.0)
-  - UnityAds (3.7.1)
+  - NendSDK_iOS (7.0.5)
+  - TapjoySDK (12.8.1)
+  - UnityAds (3.7.2)
 
 DEPENDENCIES:
   - FluctSDK-MediationAdapter
@@ -60,6 +62,7 @@ SPEC REPOS:
   trunk:
     - AdColony
     - AppLovinSDK
+    - FiveAd
     - FluctSDK
     - FluctSDK-MediationAdapter
     - GlossomAds
@@ -72,16 +75,17 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AdColony: 957c975fa756fcdb10a91e8a7d6de4cf5bfc4f78
-  AppLovinSDK: 2cc4e6b637defd9771a31fc6e7e4071ea77928c7
-  FluctSDK: 1360ff53387593521c2f5b9d4a1fcc5c43e6db4b
-  FluctSDK-MediationAdapter: 34424ace0fea3afd27620494eff74a338ab341ef
+  AppLovinSDK: 1f33698981d365c478beb314283837dfe2144adb
+  FiveAd: 4ac89a81d7b69e8ab5cb76076f85486cecd358ea
+  FluctSDK: eb10402b6dcb2fc4d14b88c0badf63c6084f1489
+  FluctSDK-MediationAdapter: 4216863d0bfd72fa821ad3e49a1347445aaa1e5f
   GlossomAds: 1ad4c13430448da5d8acaa2f0595c1189f3af824
   MaioSDK: 5a93c2209c02c4a8bddfd5da4c9a1f900bd60573
   mopub-ios-sdk: 36d322902674b79b0560a1cb8d15af0548d364ea
-  MoPubMediationAdapterFluct: 612a8c2a0b2e9fc379be7392ff037c33943e3828
-  NendSDK_iOS: 5f4d2574d19aece3ebf8ef1833ece0c4af48da23
-  TapjoySDK: eee3e1c96945a75028cc7572993a645a5f10adbe
-  UnityAds: 5b17b608ddb50ec7705b17e7884aa516be118938
+  MoPubMediationAdapterFluct: 0b054a65c67a8ebcb99e8157e099578b865bd17e
+  NendSDK_iOS: 99add67e75cffcdfa6e991e24df5d8f027088c5b
+  TapjoySDK: 6d344dfb0cd205014c9286580d5c97857b170402
+  UnityAds: cca7e2191591e0bb5d45231f012a2c8722c3e686
 
 PODFILE CHECKSUM: ac8704840b6d4ce0b4fff6eed4ca22842ecc0d7f
 
