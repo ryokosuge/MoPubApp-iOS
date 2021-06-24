@@ -8,18 +8,22 @@
 
 import UIKit
 import MoPubSDK
+import AppTrackingTransparency
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { [weak self] _ in
+                self?.initializeMoPub()
+            }
+        } else {
+            // Fallback on earlier versions
+            initializeMoPub()
+        }
 
-        // Initialize MoPub
-        let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: Consts.AdUnitID.initialize)
-        sdkConfig.loggingLevel = .debug
-        sdkConfig.allowLegitimateInterest = true
-        MoPub.sharedInstance().initializeSdk(with: sdkConfig, completion: nil)
         return true
     }
 
@@ -37,4 +41,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+}
+
+extension AppDelegate {
+
+    private func initializeMoPub() {
+        // Initialize MoPub
+        let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: Consts.AdUnitID.initialize)
+        sdkConfig.loggingLevel = .debug
+        sdkConfig.allowLegitimateInterest = true
+        MoPub.sharedInstance().initializeSdk(with: sdkConfig, completion: nil)
+    }
 }
