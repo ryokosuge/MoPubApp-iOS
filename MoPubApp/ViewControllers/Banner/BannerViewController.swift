@@ -35,7 +35,7 @@ extension BannerViewController {
 
     @IBAction func refresh(_ barButtonItem: UIBarButtonItem) {
         let startDate = Date()
-        print(#function, ": load start time [\(startDate)]")
+        print("[MoPubApp]", #function, ": load start time [\(startDate)]")
         self.startDate = startDate
         adView?.loadAd(withMaxAdSize: kMPPresetMaxAdSize50Height)
     }
@@ -53,7 +53,7 @@ extension BannerViewController {
         view.addSubview(adView)
 
         let startDate = Date()
-        print(#function, ": load start time [\(startDate)]")
+        print("[MoPubApp]", #function, ": load start time [\(startDate)]")
         self.startDate = startDate
         adView.loadAd(withMaxAdSize: kMPPresetMaxAdSize50Height)
         
@@ -69,29 +69,29 @@ extension BannerViewController: MPAdViewDelegate {
     }
 
     func adViewDidLoadAd(_ view: MPAdView!, adSize: CGSize) {
-        print(#function, view!, view!.adUnitId ?? "nil", adSize)
+        print("[MoPubApp]", #function, view!, view!.adUnitId ?? "nil", adSize)
 
         if let startDate = self.startDate {
             let endDate = Date().timeIntervalSince(startDate)
-            print(#function, ": load finish time [\(endDate)]")
+            print("[MoPubApp]", #function, ": load finish time [\(endDate)]")
             self.startDate = nil
         }
     }
 
     func adView(_ view: MPAdView!, didFailToLoadAdWithError error: Error!) {
-        print(#function, view!, view!.adUnitId ?? "nil", error.localizedDescription)
+        print("[MoPubApp]", #function, view!, view!.adUnitId ?? "nil", error.localizedDescription)
     }
 
     func didDismissModalView(forAd view: MPAdView!) {
-        print(#function, view!, view!.adUnitId ?? "nil")
+        print("[MoPubApp]", #function, view!, view!.adUnitId ?? "nil")
     }
 
     func willPresentModalView(forAd view: MPAdView!) {
-        print(#function, view!, view!.adUnitId ?? "nil")
+        print("[MoPubApp]", #function, view!, view!.adUnitId ?? "nil")
     }
 
     func willLeaveApplication(fromAd view: MPAdView!) {
-        print(#function, view!, view!.adUnitId ?? "nil")
+        print("[MoPubApp]", #function, view!, view!.adUnitId ?? "nil")
     }
 
 }

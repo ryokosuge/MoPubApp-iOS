@@ -53,14 +53,14 @@ extension RewardedVideoViewController {
 extension RewardedVideoViewController: MPRewardedAdsDelegate {
 
     func rewardedAdDidLoad(forAdUnitID adUnitID: String!) {
-        print(#function, adUnitID ?? "")
+        print("[MoPubApp]", #function, adUnitID ?? "")
         hideActivityIndicator()
         loadButton?.isEnabled = true
         showButton?.isEnabled = true
     }
 
     func rewardedAdDidFailToLoad(forAdUnitID adUnitID: String!, error: Error!) {
-        print(#function, adUnitID ?? "", error.localizedDescription)
+        print("[MoPubApp]", #function, adUnitID ?? "", error.localizedDescription)
         hideActivityIndicator()
         showAlert(message: error.localizedDescription)
         loadButton?.isEnabled = true
@@ -68,48 +68,48 @@ extension RewardedVideoViewController: MPRewardedAdsDelegate {
     }
 
     func rewardedAdWillPresent(forAdUnitID adUnitID: String!) {
-        print(#function, adUnitID ?? "")
+        print("[MoPubApp]", #function, adUnitID ?? "")
     }
 
     func rewardedAdDidPresent(forAdUnitID adUnitID: String!) {
-        print(#function, adUnitID ?? "")
+        print("[MoPubApp]", #function, adUnitID ?? "")
     }
 
     func rewardedAdDidFailToShow(forAdUnitID adUnitID: String!, error: Error!) {
-        print(#function, adUnitID ?? "", error.localizedDescription)
+        print("[MoPubApp]", #function, adUnitID ?? "", error.localizedDescription)
         showAlert(message: error.localizedDescription)
         loadButton?.isEnabled = true
         showButton?.isEnabled = false
     }
 
     func rewardedAdDidExpire(forAdUnitID adUnitID: String!) {
-        print(#function, adUnitID ?? "")
+        print("[MoPubApp]", #function, adUnitID ?? "")
         showAlert(message: "expired")
         loadButton?.isEnabled = true
         showButton?.isEnabled = false
     }
 
     func rewardedAdDidReceiveTapEvent(forAdUnitID adUnitID: String!) {
-        print(#function, adUnitID ?? "")
+        print("[MoPubApp]", #function, adUnitID ?? "")
     }
 
     func rewardedAdWillLeaveApplication(forAdUnitID adUnitID: String!) {
-        print(#function, adUnitID ?? "")
+        print("[MoPubApp]", #function, adUnitID ?? "")
     }
 
     func rewardedAdShouldReward(forAdUnitID adUnitID: String!, reward: MPReward!) {
-        print(#function, adUnitID ?? "")
+        print("[MoPubApp]", #function, adUnitID ?? "")
         if let reward = reward {
-            print("currencyType:    \(reward.currencyType ?? "")", "amount:    \(reward.amount.doubleValue)")
+            print("[MoPubApp]", "currencyType:    \(reward.currencyType ?? "")", "amount:    \(reward.amount.doubleValue)")
         }
     }
 
     func rewardedAdWillDismiss(forAdUnitID adUnitID: String!) {
-        print(#function, adUnitID ?? "")
+        print("[MoPubApp]", #function, adUnitID ?? "")
     }
 
     func rewardedAdDidDismiss(forAdUnitID adUnitID: String!) {
-        print(#function, adUnitID ?? "")
+        print("[MoPubApp]", #function, adUnitID ?? "")
         loadButton?.isEnabled = true
         showButton?.isEnabled = false
     }

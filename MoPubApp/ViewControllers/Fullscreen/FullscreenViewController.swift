@@ -52,14 +52,14 @@ extension FullscreenViewController {
 extension FullscreenViewController: MPInterstitialAdControllerDelegate {
 
     func interstitialDidLoadAd(_ interstitial: MPInterstitialAdController!) {
-        print(#function, interstitial.adUnitId ?? "")
+        print("[MoPubApp]", #function, interstitial.adUnitId ?? "")
         hideActivityIndicator()
         loadButton?.isEnabled = true
         showButton?.isEnabled = true
     }
 
     func interstitialDidFail(toLoadAd interstitial: MPInterstitialAdController!, withError error: Error!) {
-        print(#function, interstitial.adUnitId ?? "", error.localizedDescription)
+        print("[MoPubApp]", #function, interstitial.adUnitId ?? "", error.localizedDescription)
         hideActivityIndicator()
         showAlert(message: error.localizedDescription)
         loadButton?.isEnabled = true
@@ -67,27 +67,27 @@ extension FullscreenViewController: MPInterstitialAdControllerDelegate {
     }
 
     func interstitialWillAppear(_ interstitial: MPInterstitialAdController!) {
-        print(#function, interstitial.adUnitId ?? "")
+        print("[MoPubApp]", #function, interstitial.adUnitId ?? "")
     }
 
     func interstitialDidAppear(_ interstitial: MPInterstitialAdController!) {
-        print(#function, interstitial.adUnitId ?? "")
+        print("[MoPubApp]", #function, interstitial.adUnitId ?? "")
     }
 
     func interstitialDidExpire(_ interstitial: MPInterstitialAdController!) {
-        print(#function, interstitial.adUnitId ?? "")
+        print("[MoPubApp]", #function, interstitial.adUnitId ?? "")
     }
 
     func interstitialDidReceiveTapEvent(_ interstitial: MPInterstitialAdController!) {
-        print(#function, interstitial.adUnitId ?? "")
+        print("[MoPubApp]", #function, interstitial.adUnitId ?? "")
     }
 
     func interstitialWillDisappear(_ interstitial: MPInterstitialAdController!) {
-        print(#function, interstitial.adUnitId ?? "")
+        print("[MoPubApp]", #function, interstitial.adUnitId ?? "")
     }
 
     func interstitialDidDisappear(_ interstitial: MPInterstitialAdController!) {
-        print(#function, interstitial.adUnitId ?? "")
+        print("[MoPubApp]", #function, interstitial.adUnitId ?? "")
         loadButton?.isEnabled = true
         showButton?.isEnabled = false
     }
